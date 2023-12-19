@@ -1,0 +1,46 @@
+.container {
+    margin: 0 14rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 920px;
+
+
+
+    h1 {
+        font-size: 55px;
+        color: #fff;
+        margin-bottom: 15px;
+        animation: fadeIn 1s .3s backwards;
+        @media (max-width: 640px) {
+            width: 100%;
+            font-size: 40px;
+        }
+
+    }
+    p {
+        font-size: 17px;
+        width: 60%;
+        color: #fff;
+        margin-top: 15px;
+        line-height: 28px;
+        animation: fadeIn 1s .6s backwards;
+        @media (max-width: 640px) {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1200) {
+    .container {
+        margin: 10rem 10rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        height: 50vh;
+        margin: 10rem 6rem;
+        height: max-content;
+    }   
+}

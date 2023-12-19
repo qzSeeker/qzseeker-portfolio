@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+body {
+  font-family: 'Jost', sans-serif;
+}
+.nav-bar {
+  height: 8rem;
+  width: 100%;
+  background-color: #fff;
+  z-index: 20;
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .humburger {
+    display: none;
+  }
+
+  .logo {
+    display: block;
+
+    img {
+      display: block;
+      margin: 8px auto;
+      width: 85px;
+      height: auto;
+    }
+  }
+
+  //   Menu
+  .menu {
+    display: block;
+  }
+
+  .menu ul {
+    display: flex;
+
+    li {
+      color: #000;
+      display: block;
+      line-height: 51px;
+      height: 51px;
+      position: relative;
+      text-decoration: none;
+      list-style: none;
+      cursor: pointer;
+      padding: 0 10px;
+      font-size: 17px;
+
+      i {
+        transition: all 0.3s ease-out;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  @media (max-width: 640px) {
+    .menu {
+      display: none;
+    }
+  }
+
+  //   Mobile Menu
+  .hidden {
+    display: none;
+  }
+
+  @media (max-width: 640px) {
+    .mobile-menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 90%;
+      height: 100vh;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: start;
+      animation: slideInLeft 400ms forwards;
+      -webkit-box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.75);
+      z-index: 30;
+
+      .humburger {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 25px;
+        transition: 100ms ease-out;
+
+        &:hover {
+          outline: 2px solid #000;
+          outline-offset: 5px;
+          border-radius: 2px;
+        }
+      }
+      .logo-2 {
+        img {
+          display: block;
+          width: 85px;
+          height: auto;
+          position: absolute;
+          top: 0;
+          left: 0;
+          margin: 25px;
+        }
+      }
+      ul li {
+        list-style: none;
+        padding: 20px 0;
+        font-size: 20px;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        a {
+          font-family: 'Jost', sans-serif;
+        }
+      }
+
+      .social-icons {
+        display: block;
+        height: max-content;
+        width: 100%;
+
+        ul {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          padding: 0;
+
+          a {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+
+    .humburger {
+      display: block;
+    }
+  }
+
+  // Social Icons
+  .social-icons {
+    display: none;
+  }
+}
+//   Bottom Icons
+.bottom-icons {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .bottom-icons {
+    display: block;
+    height: 6.4rem;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    background-color: #fff;
+    z-index: 10;
+
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 0;
+
+      li {
+        list-style: none;
+        text-align: center;
+
+        p {
+          font-size: 13px;
+          font-weight: 550;
+        }
+
+        svg {
+          font-size: 20px;
+          color: #000;
+          cursor: pointer;
+          transition: 80ms ease-out;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
